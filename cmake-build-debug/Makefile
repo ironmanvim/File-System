@@ -150,6 +150,33 @@ diskio.c.s:
 	$(MAKE) -f CMakeFiles/File_System.dir/build.make CMakeFiles/File_System.dir/diskio.c.s
 .PHONY : diskio.c.s
 
+fileio.o: fileio.c.o
+
+.PHONY : fileio.o
+
+# target to build an object file
+fileio.c.o:
+	$(MAKE) -f CMakeFiles/File_System.dir/build.make CMakeFiles/File_System.dir/fileio.c.o
+.PHONY : fileio.c.o
+
+fileio.i: fileio.c.i
+
+.PHONY : fileio.i
+
+# target to preprocess a source file
+fileio.c.i:
+	$(MAKE) -f CMakeFiles/File_System.dir/build.make CMakeFiles/File_System.dir/fileio.c.i
+.PHONY : fileio.c.i
+
+fileio.s: fileio.c.s
+
+.PHONY : fileio.s
+
+# target to generate assembly for a file
+fileio.c.s:
+	$(MAKE) -f CMakeFiles/File_System.dir/build.make CMakeFiles/File_System.dir/fileio.c.s
+.PHONY : fileio.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -189,6 +216,9 @@ help:
 	@echo "... diskio.o"
 	@echo "... diskio.i"
 	@echo "... diskio.s"
+	@echo "... fileio.o"
+	@echo "... fileio.i"
+	@echo "... fileio.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

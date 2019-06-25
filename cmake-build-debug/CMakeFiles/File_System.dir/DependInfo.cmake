@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/home/ironmanvim/CLionProjects/File System/diskio.c" "/home/ironmanvim/CLionProjects/File System/cmake-build-debug/CMakeFiles/File_System.dir/diskio.c.o"
+  "/home/ironmanvim/CLionProjects/File System/fileio.c" "/home/ironmanvim/CLionProjects/File System/cmake-build-debug/CMakeFiles/File_System.dir/fileio.c.o"
   "/home/ironmanvim/CLionProjects/File System/main.c" "/home/ironmanvim/CLionProjects/File System/cmake-build-debug/CMakeFiles/File_System.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

@@ -7,8 +7,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define BLOCK_SIZE (16 * 1024)
-#define NO_OF_METADATA_BLOCKS 4
 
 static FILE *hdd = NULL;
 static char hdd_name[128] = "";
@@ -114,6 +112,7 @@ void format() {
     struct Metadata *metadata = malloc(sizeof(struct Metadata));
     metadata->magic_number = 0x594E4F54;
     metadata->no_of_files = 0;
+    memset(metadata->block_vector, '\0', NO_OF_BLOCKS);
     put_metadata(metadata);
     free(metadata);
 }

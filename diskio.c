@@ -27,6 +27,7 @@ static void goto_block(unsigned int block_no) {
 
 struct Metadata *get_metadata() {
     void *buffer = malloc(BLOCK_SIZE);
+    memset(buffer, 0, BLOCK_SIZE);
     read_block(buffer, 0);
     struct Metadata *metadata = malloc(sizeof(struct Metadata));
     memcpy(metadata, buffer, sizeof(struct Metadata));
@@ -36,6 +37,7 @@ struct Metadata *get_metadata() {
 
 void put_metadata(struct Metadata *metadata) {
     void *buffer = malloc(BLOCK_SIZE);
+    memset(buffer, 0, BLOCK_SIZE);
     memcpy(buffer, metadata, sizeof(struct Metadata));
     write_block(buffer, 0);
     free(buffer);
@@ -113,6 +115,7 @@ void format() {
     metadata->magic_number = 0x594E4F54;
     metadata->no_of_files = 0;
     memset(metadata->block_vector, '\0', NO_OF_BLOCKS);
+    metadata->block_vector[0] = 1;
     put_metadata(metadata);
     free(metadata);
 }

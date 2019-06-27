@@ -7,5 +7,5 @@
 
 int main() {
     init("hard_disk.hdd");
-    copy_to_disk("hello.mp4", "hello.mp4");
+    copy_from_disk("hello.mp4", "demo.mp4");
 }
